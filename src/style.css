@@ -99,7 +99,8 @@ header p,
     font-size: 1.25em;
 }
 
-.special-project:before, .special-project:after{
+.special-project:before,
+.special-project:after{
     content: "🔥";
     margin: 8px;
 }
@@ -569,6 +570,7 @@ blockquote p{
 
 .closer-section{
     width: calc(81.6% + 1px);
+    max-width: 1176px;
 }
 
 .closer-header{
@@ -612,6 +614,7 @@ footer{
     justify-content: space-between;
     align-items: start;
     margin-top: 82px;
+    max-width: 1176px;
 }
 
 .contacts-block{
@@ -893,7 +896,6 @@ a[href*="instagram"] + a[href*="instagram"]:before {
 
 @media (max-width: 979px) {
 
-
   .test-label{
       width: 640px;
       height: 716px;
@@ -908,7 +910,7 @@ a[href*="instagram"] + a[href*="instagram"]:before {
       justify-content: center;
       width: 100%;
       background: url(/assets/img/illustration.svg) center 272px no-repeat;
-      background-size: calc(100% + 128px) 981px;
+      background-size: calc(100% + 128px) auto;
       animation: displayHeader 600ms ease-out 0ms none;
       margin-bottom: 0;
   }
@@ -1049,7 +1051,7 @@ a[href*="instagram"] + a[href*="instagram"]:before {
       .page-header{
           height: 762px;
           background: url(/assets/img/illustration.svg) no-repeat center 272px;
-          background-size: calc(100% + 128px) 490px;
+          background-size: calc(100% + 128px) auto;
           animation: displayHeader 600ms ease-out 0ms none;
           margin-bottom: 0;
       }

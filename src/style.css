@@ -865,6 +865,8 @@ a[href*="instagram"] + a[href*="instagram"]:before {
 
     .closer-section{
         width: 93.5%;
+        background: url("../assets/img/illustration-bottom.svg") right 46px no-repeat;
+        background-size: 48% 450px;
     }
 
     .closer-header{
@@ -873,12 +875,6 @@ a[href*="instagram"] + a[href*="instagram"]:before {
 
     .closer-section-wrapper{
         height: 543px;
-    }
-
-    .closer-section-wrapper:before{
-        right: 3%;
-        transform: translateY(37px);
-        width: 46%;
     }
 
     .links-container{
@@ -891,6 +887,11 @@ a[href*="instagram"] + a[href*="instagram"]:before {
     footer{
         background-position-x: 96.4%;
     }
+
+    .closer-section-wrapper::before{
+        display: none;
+    }
+
 
 }
 
@@ -1024,16 +1025,17 @@ a[href*="instagram"] + a[href*="instagram"]:before {
         padding-bottom: 105px;
     }
 
-    .closer-section-wrapper:before{
-        transform: translateY(145px);
-    }
-
     .closer-section a{
         padding: 14px 125px;
     }
 
     .contacts-block{
         width: 67.5%;
+    }
+
+    .closer-section{
+        background-position: right 148px;
+        background-size: 48% 353px;
     }
 
   @keyframes displayHeader {
@@ -1282,6 +1284,8 @@ a[href*="instagram"] + a[href*="instagram"]:before {
 
       .closer-section{
         width: 90%;
+        background-size: 100% 292px;
+        background-position: right bottom;
       }
 
       .closer-section a{
@@ -1295,12 +1299,6 @@ a[href*="instagram"] + a[href*="instagram"]:before {
 
       .closer-header p{
           margin-bottom: 45px;
-      }
-
-      .closer-section-wrapper:before{
-          right: auto;
-          width: 288px;
-          transform: translateY(390px);
       }
 
       .contacts-block{

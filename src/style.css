@@ -37,6 +37,7 @@ body{
     align-items: center;
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
 }
 
 main{
@@ -45,6 +46,14 @@ main{
     flex-direction: column;
     align-items: center;
 }
+
+.header-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 820px;
+}
+
 
 .page-header{
     display: flex;
@@ -137,12 +146,12 @@ h1{
     border-radius: 12px;
     cursor: pointer;
     text-decoration: none;
+    transition: 2s ease-out;
 }
 
 .link-button:hover{
     color: #fff;
     background-color: #56B8FF;
-    transition: 2s ease;
 }
 
 /*.link-button:disabled{*/
@@ -897,6 +906,10 @@ a[href*="instagram"] + a[href*="instagram"]:before {
 
 @media (max-width: 979px) {
 
+   .header-wrapper{
+       height: 1253px;
+   }
+
   .test-label{
       width: 640px;
       height: 716px;
@@ -1049,6 +1062,10 @@ a[href*="instagram"] + a[href*="instagram"]:before {
 }
 
   @media (max-width: 767px){
+
+      .header-wrapper{
+          height: 762px;
+      }
 
       .page-header{
           height: 762px;

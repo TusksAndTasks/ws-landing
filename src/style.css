@@ -40,18 +40,25 @@ body{
     overflow-x: hidden;
 }
 
+.block-wrapper{
+    width: 1176px;
+    padding: 0 132px;
+}
+
 main{
-    margin: 0 16px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .header-wrapper{
-    width: 100%;
     display: flex;
     justify-content: center;
     height: 820px;
+    width: 1176px;
+    padding: 0 132px;
+    margin-bottom: 96px;
 }
 
 
@@ -59,9 +66,7 @@ main{
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    margin-bottom: 96px;
-    max-width: 1176px;
-    width: calc(82.6% + 1px);
+    width: 100%;
     height: 820px;
     background: url(/assets/img/illustration.svg) right 85px no-repeat;
     background-size: 676px 740px;
@@ -74,7 +79,8 @@ main{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: calc(41% + 6px);
+    width: 392px;
+    padding: 0 48px;
     border: solid #DBE3F0 1px;
     border-radius: 0 0 20px 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
@@ -91,6 +97,10 @@ header p,
     font-family: 'Futura PT Book', sans-serif;
     font-weight: 400;
     color: #637899;
+}
+
+.expert-description p:nth-of-type(1){
+    width: 224px;
 }
 
 .description-wrapper,
@@ -160,7 +170,7 @@ h1{
 /*}*/
 
 .link-wrapper a{
-    padding: 16px calc(28% + 2px);
+    padding: 16px 138px;
 }
 
 .link-wrapper p{
@@ -172,7 +182,7 @@ h1{
     height: 123px;
     border: none;
     width: 100%;
-    background: transparent url(../assets/img/button-bg.svg) center  no-repeat;
+    background: transparent url(../assets/img/button-bg.svg) center bottom no-repeat;
     background-size: contain;
     display: flex;
     justify-content: center;
@@ -204,9 +214,7 @@ h1{
 }
 
 .partners-section{
-    margin-bottom: 115px;
-    max-width: 1176px;
-    width: calc(81.6% + 1px);
+    margin-bottom: 150px;
 
 }
 
@@ -231,7 +239,7 @@ h1{
 }
 
 .general-partners-logos{
-    width: calc(31% + 2px);
+    width: 366px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 60px;
@@ -239,15 +247,13 @@ h1{
 }
 
 .info-partners-logos{
-    width: calc(72%);
+    width: 847px;
     display: flex;
     justify-content: space-between;
 }
 
 .problems-section{
     margin-bottom: 144px;
-    max-width: 1176px;
-    width: calc(81.6% + 1px);
 }
 
 h2{
@@ -372,14 +378,15 @@ h2{
 }
 
 .section-result{
-    width: 65%;
+    width: 768px;
     text-align: center;
-    margin: 0 17.5%;
+    margin: 0 204px;
 }
 
 .advantages-section-wrapper{
-    height: 744px;
-    width: 100vw;
+    height: 456px;
+    padding: 144px 0;
+    width: 100%;
     background-color: #F9FAFD;
     background-position: left;
     display: flex;
@@ -395,13 +402,10 @@ h2{
     justify-content: center;
     align-items: center;
     gap: 80px 0;
-    max-width: 1176px;
-    width: calc(81.6% + 1px);
 }
 
 .advantages-header h2{
-    margin-bottom: 0;
-    margin-top: 10px;
+    margin: 0;
 }
 
 .advantages-header p{
@@ -417,15 +421,17 @@ h2{
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    gap: 24px;
 }
 
 .advantages-container figure{
-    width: calc(32%) ;
+    width: 296px;
+    padding: 48px 40px 72px;
     border: 1px solid #DBE3F0;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
     border-radius: 20px;
     margin: 0;
-    height: 280px;
+    height: 160px;
     display: flex;
     flex-flow: column;
     justify-content: start;
@@ -433,30 +439,25 @@ h2{
     gap: 24px;
 }
 
-.advantages-container img{
-    margin-top: 48px;
-}
 
 .advantages-container figcaption{
     font-size: 20px;
     line-height: 120%;
-    width: calc(78% + 3px);
+    width: 100%;
     text-align: center;
     margin: 0;
 }
 
-.experts-section{
+.experts-section {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     gap: 80px 0;
-    width: calc(81.6% + 1px);
-    max-width: 1176px;
 }
 
 .experts-header{
-    width: calc(43% - 5px);
+    width: 512px;
     text-align: center;
     margin-top: 144px;
 }
@@ -482,12 +483,17 @@ h2{
 }
 
 .experts-section figure {
+    padding: 0 40px;
     margin: 0;
-    width: calc(23% + 6px);
+    width: 196px;
     display: flex;
     flex-flow: column;
     align-items: center;
     text-align: center;
+}
+
+.expert-comment figure{
+    padding: 0;
 }
 
 .expert-description{
@@ -507,7 +513,7 @@ h2{
 
 .experts-section img{
     box-sizing: border-box;
-    width: 71%;
+    width: 100%;
     aspect-ratio: 1/1;
     border: 1px solid #DBE3F0;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
@@ -522,21 +528,19 @@ h2{
 
 .expert-comment{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: start;
-    width: 100%;
+    width: 672px;
     margin-top: 11px;
     border: solid 1px #DBE3F0;
     border-radius: 20px;
-    padding-top: 56px;
-    padding-bottom: 32px;
+    padding: 56px 252px;
     background: url("../assets/img/dots-pattern.svg") no-repeat 97% 91%;
 }
 
 
 .expert-comment figure{
     width: 152px;
-    padding-right: 37px;
 }
 
 .expert-comment img{
@@ -545,7 +549,7 @@ h2{
 
 .expert-comment blockquote{
     margin: 0;
-    width: calc(40% + 10px);
+    width: 480px;
     color: black;
     font-size: 1.25em;
 }
@@ -554,6 +558,10 @@ blockquote p{
     margin-top: 0;
     margin-bottom: 23px;
     line-height: 120%;
+}
+
+blockquote p:last-of-type{
+    margin-bottom: 0;
 }
 
 .closer-section-wrapper{
@@ -565,7 +573,7 @@ blockquote p{
     justify-content: center;
 }
 
-.closer-section-wrapper:before{
+.closer-block:before{
     content: '';
     height: 119%;
     width: 47%;
@@ -573,17 +581,12 @@ blockquote p{
     background-repeat: no-repeat;
     position: absolute;
     background-size: contain;
-    right: 9.2%;
+    right: 8.9%;
     transform: translateY(-72px);
 }
 
-.closer-section{
-    width: calc(81.6% + 1px);
-    max-width: 1176px;
-}
-
 .closer-header{
-    width: calc(40% + 6px);
+    width: 476px;
     margin-top: 144px;
 }
 
@@ -603,13 +606,16 @@ blockquote p{
     padding: 18px 147px;
 }
 
+.footer-wrapper{
+    width: 100%;
+    background-color: #F9FAFD;
+}
+
 
 footer{
-    background-color: #F9FAFD;
     height: 330px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    width: 1176px;
+    padding: 0 132px;
     background-image: url("../assets/img/WS-Logo-Mono.svg");
     background-repeat: no-repeat;
     background-size: 102px 74px;
@@ -617,7 +623,7 @@ footer{
 }
 
 .links-container{
-    width: calc(81.6% + 1px);
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -630,7 +636,7 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: start;
-    width: calc(40% + 15px);
+    width: 485px;
 }
 
 .social-links,
@@ -691,7 +697,7 @@ a[href^="tel"]{
 }
 
 a[href*="freepik"]{
-    margin-bottom: 80px;
+    margin-top: 37px;
     letter-spacing: 0.008em;
 }
 
@@ -759,33 +765,21 @@ a[href*="instagram"] + a[href*="instagram"]:before {
 
 
 @media (max-width: 1439px) {
+
+    .block-wrapper,
+    .header-wrapper,
+    footer{
+        width: 916px;
+        padding: 0 32px;
+    }
+
     h1{
         font-weight: 500;
     }
 
-    .page-header{
-        width: 93.5% ;
-    }
-
     .test-label{
-        width: 488px;
+        width: 392px;
         background-color: #ffffff;
-    }
-
-    .partners-section{
-        width: calc(95% + 1px);
-    }
-
-    .general-partners-logos{
-        width: 40%;
-    }
-
-    .info-partners-logos{
-        width: 92.5%;
-    }
-
-    .problems-section{
-        width: 93.5%;
     }
 
     .problem-description{
@@ -808,44 +802,37 @@ a[href*="instagram"] + a[href*="instagram"]:before {
     }
 
     .section-result{
-        width: 83.8%;
-        margin: 0 8%;
+        width: 768px;
+        margin: 0 73px;
     }
 
     .advantages-section-wrapper{
-        height: 792px;
+        height: 504px;
     }
 
-    .advantages-section{
-        width: 93.5%;
-        height: 100%;
-    }
 
     .advantages-container figure{
-        height: 328px;
-        width: 31.3%;
+        height: 208px;
+        width: 205px;
     }
 
-    .advantages-container figcaption{
-        width: 71%;
-    }
-
-    .experts-section{
-        width: 93.5%;
-    }
-    .experts-header{
-        width: 55.9%;
-    }
     .experts-container{
-        gap: 56px 30px;
+        gap: 65px 23px;
     }
 
     .experts-section figure{
-        width: 22.5%;
+        width: 131px;
+    }
+
+    .expert-description p:nth-of-type(1){
+        width: 210px;
+    }
+
+    .expert-comment figure{
+        width: 152px;
     }
 
     .experts-section img{
-        width: 63%;
         border-radius: 42px;
     }
 
@@ -854,50 +841,30 @@ a[href*="instagram"] + a[href*="instagram"]:before {
     }
 
     .expert-comment{
-        padding-bottom: 19px;
-        padding-top: 40px;
+        padding: 40px 122px;
         background: url(../assets/img/dots-pattern.svg) no-repeat 96% 90%;
     }
 
     .expert-comment img{
-        width: 98%;
+        width: 152px;
         border-radius: 56px;
     }
 
-    .expert-comment figure{
-        width: 17%;
-    }
-
-    .expert-comment blockquote{
-        width: 52.4%;
-    }
-
-    .closer-section{
-        width: 93.5%;
-        background: url("../assets/img/illustration-bottom.svg") right 46px no-repeat;
-        background-size: 48% 450px;
-    }
-
     .closer-header{
-        width: 49%;
+        width: 446px;
     }
 
     .closer-section-wrapper{
         height: 543px;
+        background: #F9FAFD url("../assets/img/illustration-bottom.svg") 490px 46px no-repeat;
+        background-size: 48% 450px;
     }
 
-    .links-container{
-        width: 93.5%;
-    }
-
-    .contacts-block{
-        width: 53%;
-    }
     footer{
         background-position-x: 96.4%;
     }
 
-    .closer-section-wrapper::before{
+    .closer-block::before{
         display: none;
     }
 
@@ -906,12 +873,22 @@ a[href*="instagram"] + a[href*="instagram"]:before {
 
 @media (max-width: 979px) {
 
+    .block-wrapper,
+    footer{
+        width: 720px;
+        padding: 0 24px;
+    }
+
    .header-wrapper{
        height: 1253px;
+       width: 100%;
+       padding: 0;
+       margin-bottom: 0;
    }
 
   .test-label{
-      width: 640px;
+      width: 554px;
+      padding: 0 48px;
       height: 716px;
       background: #fff url("../assets/img/WS-Logo-Mono.svg") 252px 50px no-repeat;
       background-size: 156px 54px;
@@ -930,14 +907,9 @@ a[href*="instagram"] + a[href*="instagram"]:before {
   }
 
   .description-wrapper{
-      width: 79%;
+      width: 100%;
       margin-top: 117px;
   }
-
-  .link-wrapper a{
-      padding: 16px 22%;
-  }
-
 
   h1 br:last-of-type{
       display: none;
@@ -999,7 +971,7 @@ a[href*="instagram"] + a[href*="instagram"]:before {
     }
 
     .advantages-section-wrapper{
-        height: 1096px;
+        height: 808px;
     }
 
     .advantages-container{
@@ -1009,41 +981,41 @@ a[href*="instagram"] + a[href*="instagram"]:before {
     }
 
     .advantages-container figure{
-        width: 48.3%;
-        height: 304px;
+        width: 268px;
+        height: 184px;
     }
 
-    .experts-header{
-        width: 71%;
-    }
-
-    .experts-section figure{
-        width: 28.5%;
+    .experts-container{
+      gap: 62px 23px;
     }
 
     .expert-comment{
+        width: 640px;
+        padding: 40px 40px;
         background-size: 56px 56px;
         background-position: 95% 92%;
     }
 
     .expert-comment figure{
-        width: 22%;
+        width: 152px;
     }
 
     .expert-comment blockquote{
-        width: 63.4%;
+        width: 448px;
     }
 
     .closer-section-wrapper{
         padding-bottom: 105px;
+        background: #F9FAFD url(../assets/img/illustration-bottom.svg) 380px 95px no-repeat;
+        background-size: 48% 450px;
     }
 
     .closer-section a{
         padding: 14px 125px;
     }
 
-    .contacts-block{
-        width: 67.5%;
+    .closer-header{
+        width: 348px;
     }
 
     .closer-section{
@@ -1063,8 +1035,15 @@ a[href*="instagram"] + a[href*="instagram"]:before {
 
   @media (max-width: 767px){
 
-      .header-wrapper{
+      .block-wrapper,
+      footer{
+          width: 288px;
+          padding: 0 16px;
+      }
+
+      .header-wrapper {
           height: 762px;
+          width: 100%;
       }
 
       .page-header{
@@ -1076,7 +1055,8 @@ a[href*="instagram"] + a[href*="instagram"]:before {
       }
 
       .test-label{
-          width: calc(100% - 32px);
+          width: 256px;
+          padding: 0 16px;
           height: 614px;
           background-position: 57% 32px;
       }
@@ -1095,10 +1075,6 @@ a[href*="instagram"] + a[href*="instagram"]:before {
           font-size: 18px;
       }
 
-      .description-wrapper{
-          width: 89%;
-      }
-
       .test-description{
           line-height: 122%;
       }
@@ -1112,7 +1088,7 @@ a[href*="instagram"] + a[href*="instagram"]:before {
       }
 
       .link-wrapper a{
-          padding: 13px 27%;
+          padding: 13px 77px;
       }
 
       .button-wrapper{
@@ -1140,7 +1116,7 @@ a[href*="instagram"] + a[href*="instagram"]:before {
       }
 
       .partners-section{
-          margin-bottom: 67px;
+          margin-bottom: 93px;
       }
 
       .general-partners-logos,
@@ -1170,7 +1146,6 @@ a[href*="instagram"] + a[href*="instagram"]:before {
       }
 
       .problems-section{
-          width: 90%;
           margin-bottom: 93px;
       }
 
@@ -1190,12 +1165,9 @@ a[href*="instagram"] + a[href*="instagram"]:before {
           margin: 24px 32px 56px;
       }
 
-      .section-result{
-          width: 99%;
-      }
-
       .advantages-section-wrapper{
-          height: 1290px;
+          height: 1098px;
+          padding: 96px 0;
       }
 
       .advantages-section{
@@ -1205,18 +1177,17 @@ a[href*="instagram"] + a[href*="instagram"]:before {
 
       .advantages-section h2{
         text-align: center;
-          margin-top: 47px;
-          margin-bottom: -15px;
+          margin-bottom: -10px;
       }
 
       .advantages-header p{
           letter-spacing: initial;
+          margin-bottom: 56px;
       }
 
       .advantages-container figure{
-          width: 288px;
+          width: 208px;
           height: auto;
-          padding-bottom: 74px;
   }
       .advantages-container{
           gap: 10px;
@@ -1224,7 +1195,6 @@ a[href*="instagram"] + a[href*="instagram"]:before {
       }
 
       .experts-section{
-          width: 90%;
           gap: 53px 0;
       }
 
@@ -1255,54 +1225,45 @@ a[href*="instagram"] + a[href*="instagram"]:before {
       }
 
       .experts-container figure{
-          min-width: 188px;
+          width: 140px;
+          padding: 0 24px;
       }
       .experts-container img{
-          width: 75.6%;
           border-radius: 38px;
       }
 
-      .expert-description{
-          width: 70%;
-      }
-
       .expert-comment{
-          margin-top: -25px;
+          padding: 40px 16px;
+          width: 256px;
           flex-direction: column;
           justify-content: space-between;
           align-items: center;
           background-size: 41px 41px;
           background-position: 94% 98%;
+          margin-top: 71px;
       }
 
       .expert-comment figure{
-          width: 50%;
+          width: 140px;
           padding-right: 0;
           margin-bottom: 27px;
       }
 
       .expert-comment img{
           border-radius: 38px;
-      }
-
-      .expert-comment figcaption{
           width: 100%;
       }
 
       .expert-comment blockquote{
-          width: 89%;
+          width: 100%;
       }
 
-      .closer-section-wrapper{
+      .closer-section-wrapper {
           margin-top: 98px;
           height: 680px;
           padding-bottom: 56px;
-      }
-
-      .closer-section{
-        width: 90%;
-        background-size: 100% 292px;
-        background-position: right bottom;
+          background-size: 100% 292px;
+          background-position: 0 392px;
       }
 
       .closer-section a{
@@ -1325,9 +1286,12 @@ a[href*="instagram"] + a[href*="instagram"]:before {
 
       .links-container{
           margin-top: 0;
-          padding-left: 10px;
           justify-content: start;
           gap: 49px;
+      }
+
+      a[href*="freepik"]{
+          margin-top: 0;
       }
 
       footer{

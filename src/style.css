@@ -157,17 +157,13 @@ h1{
     cursor: pointer;
     text-decoration: none;
     transition: 2s ease-out;
+    transition-property: background-color, color;
 }
 
 .link-button:hover{
     color: #fff;
     background-color: #56B8FF;
 }
-
-/*.link-button:disabled{*/
-/*    color: #DBE3F0;*/
-/*    border-color: #DBE3F0;*/
-/*}*/
 
 .link-wrapper a{
     padding: 16px 138px;
@@ -856,7 +852,7 @@ a[href*="instagram"] + a[href*="instagram"]:before {
 
     .closer-section-wrapper{
         height: 543px;
-        background: #F9FAFD url("../assets/img/illustration-bottom.svg") 490px 46px no-repeat;
+        background: #F9FAFD url("../assets/img/illustration-bottom.svg") 97% 46px no-repeat;
         background-size: 48% 450px;
     }
 
@@ -1006,7 +1002,7 @@ a[href*="instagram"] + a[href*="instagram"]:before {
 
     .closer-section-wrapper{
         padding-bottom: 105px;
-        background: #F9FAFD url(../assets/img/illustration-bottom.svg) 380px 95px no-repeat;
+        background: #F9FAFD url(../assets/img/illustration-bottom.svg) 95% 95px no-repeat;
         background-size: 48% 450px;
     }
 
@@ -1048,7 +1044,7 @@ a[href*="instagram"] + a[href*="instagram"]:before {
 
       .page-header{
           height: 762px;
-          background: url(/assets/img/illustration.svg) no-repeat center 272px;
+          background: url(/assets/img/illustration.svg) no-repeat center 100%;
           background-size: calc(100% + 128px) auto;
           animation: displayHeader 600ms ease-out 0ms none;
           margin-bottom: 0;
@@ -1313,6 +1309,10 @@ a[href*="instagram"] + a[href*="instagram"]:before {
 @-moz-document url-prefix() {
     h2{
         font-weight: 500;
+    }
+
+    .link-wrapper a{
+        padding: 13px 74px;
     }
 }
 

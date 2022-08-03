@@ -40,7 +40,7 @@ body{
     overflow-x: hidden;
 }
 
-.block-wrapper{
+.content-container{
     width: 1176px;
     padding: 0 132px;
 }
@@ -103,8 +103,7 @@ header p,
     width: 224px;
 }
 
-.description-wrapper,
-.closer-section-wrapper{
+.description-wrapper{
     width: 100%;
     height: 336px;
     margin-top: 97px;
@@ -145,7 +144,7 @@ h1{
 
 .link-button{
     color: #56B8FF;
-    font-family: "Futura PT Medium", sans-serif;
+    font-family: "Futura PT Bold", sans-serif;
     font-weight: 800;
     font-size: 1.125em;
     line-height: 125%;
@@ -156,8 +155,7 @@ h1{
     border-radius: 12px;
     cursor: pointer;
     text-decoration: none;
-    transition: 2s ease-out;
-    transition-property: background-color, color;
+    transition:background-color 0.5s ease-out, color 0.5s ease-out;
 }
 
 .link-button:hover{
@@ -166,7 +164,7 @@ h1{
 }
 
 .link-wrapper a{
-    padding: 16px 138px;
+    padding: 16px 134px;
 }
 
 .link-wrapper p{
@@ -379,25 +377,26 @@ h2{
     margin: 0 204px;
 }
 
-.advantages-section-wrapper{
-    height: 456px;
-    padding: 144px 0;
+.advantages-section-background{
     width: 100%;
+    height: 744px;
     background-color: #F9FAFD;
-    background-position: left;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: absolute;
+    left: 0;
+    z-index: -1;
 }
 
 
 .advantages-section{
-    height: 100%;
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
     gap: 80px 0;
+    height: 456px;
+    padding: 144px 0;
+    width: 100%;
+    background-position: left;
 }
 
 .advantages-header h2{
@@ -560,35 +559,24 @@ blockquote p:last-of-type{
     margin-bottom: 0;
 }
 
-.closer-section-wrapper{
-    height: 576px;
+.footer-background{
+    height: 906px;
     background-color: #F9FAFD;
-    position: relative;
-    margin-top: 144px;
-    display: flex;
-    justify-content: center;
-}
-
-.closer-block:before{
-    content: '';
-    height: 119%;
-    width: 47%;
-    background-image: url("../assets/img/illustration-bottom.svg");
-    background-repeat: no-repeat;
     position: absolute;
-    background-size: contain;
-    right: 8.9%;
-    transform: translateY(-72px);
+    z-index: -1;
+    left: 0;
+    width: 100%;
+    transform: translateY(-144px);
 }
 
 .closer-header{
     width: 476px;
-    margin-top: 144px;
 }
 
 .closer-header h2{
     margin-bottom: 0;
     letter-spacing: 0.0003em;
+    margin-top: 0;
 }
 
 .closer-header p{
@@ -598,24 +586,41 @@ blockquote p:last-of-type{
     margin-bottom: 67px;
 }
 
-.closer-section a{
-    padding: 18px 147px;
+.closer-section {
+ margin-top: 144px;
+ padding: 144px 0;
+  height: 288px;
 }
 
-.footer-wrapper{
-    width: 100%;
-    background-color: #F9FAFD;
+.closer-section:before{
+    content: '';
+    height: 56%;
+    width: 47%;
+    background-image: url("../assets/img/illustration-bottom.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    background-size: contain;
+    right: 8.9%;
+    transform: translateY(-215px);
+}
+
+
+.closer-section a{
+    padding: 16px 144px;
 }
 
 
 footer{
-    height: 330px;
-    width: 1176px;
-    padding: 0 132px;
+    width: 100%;
+}
+
+.links-section{
     background-image: url("../assets/img/WS-Logo-Mono.svg");
     background-repeat: no-repeat;
     background-size: 102px 74px;
-    background-position: 90.1% 178px;
+    background-position: right 175px;
+    padding: 80px 0;
+    height: 170px;
 }
 
 .links-container{
@@ -624,7 +629,6 @@ footer{
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
-    margin-top: 82px;
     max-width: 1176px;
 }
 
@@ -762,9 +766,8 @@ a[href*="instagram"] + a[href*="instagram"]:before {
 
 @media (max-width: 1439px) {
 
-    .block-wrapper,
-    .header-wrapper,
-    footer{
+    .content-container,
+    .header-wrapper{
         width: 916px;
         padding: 0 32px;
     }
@@ -802,7 +805,7 @@ a[href*="instagram"] + a[href*="instagram"]:before {
         margin: 0 73px;
     }
 
-    .advantages-section-wrapper{
+    .advantages-section{
         height: 504px;
     }
 
@@ -850,17 +853,18 @@ a[href*="instagram"] + a[href*="instagram"]:before {
         width: 446px;
     }
 
-    .closer-section-wrapper{
-        height: 543px;
+    .footer-background{
         background: #F9FAFD url("../assets/img/illustration-bottom.svg") 97% 46px no-repeat;
         background-size: 48% 450px;
     }
 
-    footer{
-        background-position-x: 96.4%;
+    .links-section{
+        padding: 48px 0 80px;
+        margin: 0;
+        background-position: right 148px;
     }
 
-    .closer-block::before{
+    .closer-section::before{
         display: none;
     }
 
@@ -869,8 +873,7 @@ a[href*="instagram"] + a[href*="instagram"]:before {
 
 @media (max-width: 979px) {
 
-    .block-wrapper,
-    footer{
+    .content-container{
         width: 720px;
         padding: 0 24px;
     }
@@ -901,6 +904,11 @@ a[href*="instagram"] + a[href*="instagram"]:before {
       animation: displayHeader 600ms ease-out 0ms none;
       margin-bottom: 0;
   }
+
+  .link-button{
+      letter-spacing: 0.08em;
+  }
+
 
   .description-wrapper{
       width: 100%;
@@ -966,7 +974,11 @@ a[href*="instagram"] + a[href*="instagram"]:before {
         margin: 0;
     }
 
-    .advantages-section-wrapper{
+    .advantages-section-background{
+        height: 1096px;
+    }
+
+    .advantages-section{
         height: 808px;
     }
 
@@ -1000,14 +1012,14 @@ a[href*="instagram"] + a[href*="instagram"]:before {
         width: 448px;
     }
 
-    .closer-section-wrapper{
+    .footer-background{
         padding-bottom: 105px;
         background: #F9FAFD url(../assets/img/illustration-bottom.svg) 95% 95px no-repeat;
-        background-size: 48% 450px;
+        background-size: 46% 450px;
     }
 
     .closer-section a{
-        padding: 14px 125px;
+        padding: 14px 118px;
     }
 
     .closer-header{
@@ -1017,6 +1029,11 @@ a[href*="instagram"] + a[href*="instagram"]:before {
     .closer-section{
         background-position: right 148px;
         background-size: 48% 353px;
+    }
+
+    .links-section{
+     padding: 150px 0 80px;
+        background-position: right 250px;
     }
 
   @keyframes displayHeader {
@@ -1031,8 +1048,7 @@ a[href*="instagram"] + a[href*="instagram"]:before {
 
   @media (max-width: 767px){
 
-      .block-wrapper,
-      footer{
+      .content-container{
           width: 288px;
           padding: 0 16px;
       }
@@ -1084,7 +1100,7 @@ a[href*="instagram"] + a[href*="instagram"]:before {
       }
 
       .link-wrapper a{
-          padding: 13px 77px;
+          padding: 13px 70px;
       }
 
       .button-wrapper{
@@ -1161,14 +1177,16 @@ a[href*="instagram"] + a[href*="instagram"]:before {
           margin: 24px 32px 56px;
       }
 
-      .advantages-section-wrapper{
-          height: 1098px;
-          padding: 96px 0;
+      .advantages-section-background{
+          height: 1290px;
+          transform: translateY(-96px);
       }
 
       .advantages-section{
-          justify-content: space-evenly;
+          height: 1098px;
           gap: 0;
+          padding: 96px 0;
+          justify-content: normal;
       }
 
       .advantages-section h2{
@@ -1254,16 +1272,23 @@ a[href*="instagram"] + a[href*="instagram"]:before {
           width: 100%;
       }
 
-      .closer-section-wrapper {
+      .footer-background {
           margin-top: 98px;
-          height: 680px;
+          height: 1248px;
           padding-bottom: 56px;
           background-size: 100% 292px;
-          background-position: 0 392px;
+          background-position: 0 440px;
       }
 
+      .closer-section{
+          margin-top: 0;
+          height: 584px;
+          padding: 96px 0 0 0;
+      }
+
+
       .closer-section a{
-          padding: 12px 101px;
+          padding: 12px 94px;
       }
 
       .closer-header{
@@ -1291,8 +1316,12 @@ a[href*="instagram"] + a[href*="instagram"]:before {
       }
 
       footer{
-          height: 568px;
-          background-position: 93.4% 393px;
+       height: 1248px;
+      }
+
+      .links-section{
+          height: 440px;
+          background-position: right 550px;
           background-size: 79px 70px;
       }
 
@@ -1311,9 +1340,12 @@ a[href*="instagram"] + a[href*="instagram"]:before {
         font-weight: 500;
     }
 
-    .link-wrapper a{
-        padding: 13px 74px;
+    @media(max-width: 979px){
+        .link-button{
+            font-weight: normal;
+        }
     }
+
 }
 
 
